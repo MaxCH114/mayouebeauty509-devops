@@ -1,0 +1,71 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform lock file
+# Keep this file committed for reproducible provider versions
+!.terraform.lock.hcl
+
+# AWS
+.aws/
+credentials
+config
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# Kubernetes secrets / local config
+kubeconfig
+*.kubeconfig
+
+# Kubernetes generated files
+*.secret.yaml
+*.secret.yml
+
+# Docker
+docker-compose.override.yml
+
+# Jenkins
+jenkins_home/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Build artifacts
+dist/
+build/
+coverage/
