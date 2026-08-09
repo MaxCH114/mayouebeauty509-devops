@@ -7,28 +7,10 @@ import HeroSlider from "@/components/heros/HeroSlider";
 
 const heroImages = [
   {
-    bgImg: "/heroImages/clothing1.png",
-  },
-  {
-    bgImg: "/heroImages/gadget1.png",
+    bgImg: "/heroImages/makeup1.png",
   },
   {
     bgImg: "/heroImages/makeup2.png",
-  },
-  {
-    bgImg: "/heroImages/furniture1.png",
-  },
-  {
-    bgImg: "/heroImages/clothing2.png",
-  },
-  {
-    bgImg: "/heroImages/book1.png",
-  },
-  {
-    bgImg: "/heroImages/clothing3.png",
-  },
-  {
-    bgImg: "/heroImages/grocery.png",
   },
 ];
 

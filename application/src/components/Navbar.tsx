@@ -159,22 +159,15 @@ const Navbar = () => {
             <div className="hidden lg:block">
               <ToggleTheme />
             </div>
-            <Button
-              variant="outline"
-              size="sm"
-              className="hidden md:flex items-center gap-2 hover:bg-primary hover:text-white"
-              asChild
-            >
-              <a
-                href="https://github.com/MaxCH114/mayouebeauty509-devops"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
-              >
-                <FaGithub className="text-lg" />
-                <span>Source Code</span>
-              </a>
-            </Button>
+            <Link href="/about">
+  <Button
+    variant="outline"
+    size="sm"
+    className="hidden md:flex items-center gap-2 hover:bg-primary hover:text-white"
+  >
+    <span>About Mayoue</span>
+  </Button>
+</Link>
             {!isAuthenticated && (
               <Link href="/login">
                 <Button>Join</Button>

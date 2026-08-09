@@ -148,7 +148,7 @@ const ShopCategories = () => {
           <div className="gadgets bg-secondary p-4 rounded-lg shadow-lg flex flex-col justify-between gap-y-2">
             <div>
               <h2 className="capitalize font-semibold text-2xl">
-                MayoueBeauty509 <span className="text-primary">Gadget</span> Store
+                MayoueBeauty509 <span className="text-primary">Beauty</span> Store
               </h2>
               <div className="grid grid-cols-2 gap-5 mt-5">
                 {gadgets.map((item, index) => (
@@ -184,7 +184,7 @@ const ShopCategories = () => {
           <div className="clothing bg-secondary p-4 rounded-lg shadow-lg flex flex-col justify-between gap-y-2">
             <div>
               <h2 className="capitalize font-semibold text-2xl">
-                <span className="text-primary">Fashion</span> trends you like
+                <span className="text-primary">Beauty</span> & Fashion Essentials
               </h2>
               <div className="grid grid-cols-3 gap-x-3 gap-y-2 mt-5">
                 {clothing.map((item, index) => (
@@ -220,7 +220,7 @@ const ShopCategories = () => {
           <div className="beauty bg-secondary p-4 rounded-lg shadow-lg flex flex-col justify-between gap-y-2">
             <div>
               <h2 className="capitalize font-semibold text-2xl">
-                <span className="text-primary">Beauty</span> Products
+                <span className="text-primary">MayoueBeauty</span> 509 Collection
               </h2>
               <div className="grid grid-cols-2 gap-5 mt-5 h-fit">
                 {beauty.map((item, index) => (

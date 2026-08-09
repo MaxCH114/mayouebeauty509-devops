@@ -1,19 +1,22 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FaOpencart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 
 const Logo = () => {
   return (
-    <Link href={"/"} className="flex gap-3 items-center">
-      <span className="text-4xl text-primary">
-        <FaOpencart />
+    <Link href="/" className="flex gap-3 items-center">
+      <span className="text-3xl text-primary">
+        <FaHeart />
       </span>
-      <div>
-        <p className="text-xl font-semibold whitespace-nowrap">
-          Easy <span className="text-primary">Shop</span>
+
+      <div className="leading-tight">
+        <p className="text-xl font-bold whitespace-nowrap">
+          Mayoue<span className="text-primary">Beauty</span>
         </p>
-        {/* <p className="text-xs">Enjoy shopping</p> */}
+
+        <p className="text-[10px] font-medium tracking-[0.25em] text-muted-foreground">
+          BEAUTY 509
+        </p>
       </div>
     </Link>
   );
