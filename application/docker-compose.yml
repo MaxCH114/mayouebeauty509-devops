@@ -1,0 +1,53 @@
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mayouebeauty509-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - mayouebeauty509-network
+
+  migration:
+    build:
+      context: .
+      dockerfile: scripts/Dockerfile.migration
+    container_name: mayouebeauty509-migration
+    env_file:
+      - .env.local
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    networks:
+      - mayouebeauty509-network
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mayouebeauty509
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.local
+    depends_on:
+      migration:
+        condition: service_completed_successfully
+    networks:
+      - mayouebeauty509-network
+    restart: unless-stopped
+
+networks:
+  mayouebeauty509-network:
+    name: mayouebeauty509-network
+
+volumes:
+  mongodb_data:
+    name: mayouebeauty509_data
