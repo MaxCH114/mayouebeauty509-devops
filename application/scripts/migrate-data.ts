@@ -2,7 +2,9 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import mongoose from 'mongoose';
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://mayouebeauty509-mongodb:27017/mayouebeauty509';
+const MONGODB_URI =
+  process.env.MONGODB_URI ||
+  'mongodb://localhost:27017/mayouebeauty509';
 const scriptDir = path.resolve(path.dirname(''));
 
 // Product Schema
