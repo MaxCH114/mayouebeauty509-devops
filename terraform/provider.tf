@@ -3,7 +3,7 @@ provider "aws" {
 
   default_tags {
     tags = {
-      Project     = "MayoueBeauty509"
+      Project     = "Mayoue_Beauty509"
       Environment = var.environment
       ManagedBy   = "Terraform"
     }
